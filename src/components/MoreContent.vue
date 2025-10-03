@@ -1,7 +1,7 @@
 <template>
   <div class="more-content">
     <span class="greeting">
-      您可在此编写任意内容
+      浮光未歇，落霞万千
     </span>
   </div>
 </template>
