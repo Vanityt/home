@@ -2,7 +2,7 @@
     <div v-if="store.footerProgressBar" class="progress-bar">
         <div class="progress" :class="{ dragging: isDragging }"
             :style="{ width: isDragging ? `${dragProgress}%` : `${progressBarWidth}%` }">
-            <img v-if="store.showProgressIcon" src="/images/icon/ProgressBar.ico" class="progress-icon" draggable="false"
+            <img v-if="store.showProgressIcon" src="/images/icon/bangboo.gif" class="progress-icon" draggable="false"
                 @mousedown="handleMouseDown" @touchstart.prevent="handleTouchStart" ref="icon" />
             <Icon v-if="!store.playerCanplay" size="32" color="black" class="ReloadCircle">
                 <ReloadCircle />
