@@ -184,15 +184,15 @@ export const getOtherWeather = async () => {
 
 // 获取小米天气 API
 export const getXMWeather = async (city) => {
-  // const res = await fetch(`https://weatherapi.market.xiaomi.com/wtr-v3/weather/all?latitude=0&longitude=0&isLocated=true&locationKey=weathercn%3A${city}&days=2&appKey=weather20151024&sign=zUFJoAR2ZVrDy1vF3D07&locale=zh_cn&alpha=false&isGlobal=false`);
-  const res = await fetch(`https://api.nanorocky.top/xmw/?city=weathercn%3A${city}`);
+  const res = await fetch(`https://weatherapi.market.xiaomi.com/wtr-v3/weather/all?latitude=0&longitude=0&isLocated=true&locationKey=weathercn%3A${city}&days=2&appKey=weather20151024&sign=zUFJoAR2ZVrDy1vF3D07&locale=zh_cn&alpha=false&isGlobal=false`);
+  // const res = await fetch(`https://api.nanorocky.top/xmw/?city=weathercn%3A${city}`);
   return await res.json();
 };
 
 // 获取 IPV4 地址的地理位置信息 API
 export const getIPV4AddrLocation = async (ipv4) => {
-  // const res = await fetch(`https://ip.taobao.com/outGetIpInfo?ip=${ipv4}&accessKey=alibaba-inc`);
-  const res = await fetch(`https://api.nanorocky.top/tbipinfo/?ip=${ipv4}`);
+  const res = await fetch(`https://ip.taobao.com/outGetIpInfo?ip=${ipv4}&accessKey=alibaba-inc`);
+  // const res = await fetch(`https://api.nanorocky.top/tbipinfo/?ip=${ipv4}`);
   return await res.json();
 };
 
