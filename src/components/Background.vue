@@ -32,8 +32,8 @@ const isLoading = ref(false);
 // 自定义壁纸
 // 酪灰的小批注：这里增加了从配置文件读取壁纸数的功能，使得在增加壁纸时不需要重新编译项目，只需修改这个 json 文件内的值
 // 设置一个默认值，防止在无法加载 JSON 文件时壁纸失效。应该尽量保证壁纸数始终不小于这个默认值
-let bgImageCount = 10; // PC 版壁纸
-let bgImageCountP = 2; // 移动版壁纸
+let bgImageCount = 1; // PC 版壁纸
+let bgImageCountP = 12; // 移动版壁纸
 let bgRandom = 0;
 let bgRandomp = 0;
 let confUrlS = null;
@@ -102,10 +102,10 @@ const changeBg = async (type) => {
         // 如果不需要区分设备类型，则只需要保留这一行 bgUrl.value = `/images/background${bgRandom}.jpg`;
         if (deviceType === 'mobile') {
           if (key) {
-            const bgUrlS = `/images/phone/backgroundphone${bgRandomp}.jpg`;
+            const bgUrlS = `/images/phone/backgroundphone${bgRandomp}.png`;
             bgUrl.value = await gasC(bgUrlS, key);
           } else {
-            bgUrl.value = `/images/phone/backgroundphone${bgRandomp}.jpg`;
+            bgUrl.value = `/images/phone/backgroundphone${bgRandomp}.png`;
           };
         } else if (deviceType === 'tablet' || deviceType === 'pc') {
           if (key) {
